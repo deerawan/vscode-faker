@@ -1,6 +1,6 @@
 {
-  "name": "y",
-  "displayName": "vscode-test-hello",
+  "name": "vscode-faker",
+  "displayName": "vscode-faker",
   "description": "y",
   "version": "0.0.1",
   "publisher": "deerawan",
@@ -11,14 +11,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.sayHello"
+    "onCommand:extension.fakerAddress",
+    "onCommand:extension.fakerCommerce",
+    "onCommand:extension.fakerCompany"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "extension.sayHello",
-        "title": "Hello World"
+        "command": "extension.fakerAddress",
+        "title": "Faker: address"
+      },
+      {
+        "command": "extension.fakerCommerce",
+        "title": "Faker: commerce"
+      },
+      {
+        "command": "extension.fakerCompany",
+        "title": "Faker: company"
       }
     ]
   },
