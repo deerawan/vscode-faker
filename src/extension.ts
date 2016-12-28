@@ -6,6 +6,7 @@ const address = new Address();
 const commerce = new Commerce();
 const company = new Company();
 const date = new Date();
+const finance = new Finance();
 
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(commands.registerCommand('extension.fakerAddress', () => {
@@ -22,6 +23,10 @@ export function activate(context: ExtensionContext) {
 
   context.subscriptions.push(commands.registerCommand('extension.fakerDate', () => {
     executeFaker(date);
+  }));
+
+  context.subscriptions.push(commands.registerCommand('extension.fakerFinance', () => {
+    executeFaker(finance);
   }));
 }
 
