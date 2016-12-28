@@ -13,7 +13,8 @@
   "activationEvents": [
     "onCommand:extension.fakerAddress",
     "onCommand:extension.fakerCommerce",
-    "onCommand:extension.fakerCompany"
+    "onCommand:extension.fakerCompany",
+    "onCommand:extension.fakerDate"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -29,6 +30,10 @@
       {
         "command": "extension.fakerCompany",
         "title": "Faker: Company"
+      },
+      {
+        "command": "extension.fakerDate",
+        "title": "Faker: Date"
       }
     ]
   },
