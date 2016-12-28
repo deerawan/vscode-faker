@@ -1,5 +1,6 @@
+import { FakerEntity } from './faker-entity';
 
-export class Commerce {
+export class Commerce implements FakerEntity {
   public getName() {
     return 'commerce';
   }

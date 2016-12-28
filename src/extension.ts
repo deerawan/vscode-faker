@@ -1,8 +1,9 @@
 import { TextEditor, window, ExtensionContext, commands } from 'vscode';
-const faker = require('faker');
+import { FakerEntity } from './faker-entity';
 import { Address } from './address';
 import { Commerce } from './commerce';
 import { Company } from './company';
+const faker = require('faker');
 
 const address = new Address();
 const commerce = new Commerce();
@@ -10,12 +11,15 @@ const company = new Company();
 
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(commands.registerCommand('extension.fakerAddress', () => {
-    window
-      .showQuickPick(address.getMethods())
-      .then((selectedMethod) => {
-        let value = faker[address.getName()][selectedMethod]();
-        insertText(getEditor(), value);
-      });
+    executeFaker(address);
+  }));
+
+  context.subscriptions.push(commands.registerCommand('extension.fakerCommerce', () => {
+    executeFaker(commerce);
+  }));
+
+  context.subscriptions.push(commands.registerCommand('extension.fakerCompany', () => {
+    executeFaker(company);
   }));
 }
 
@@ -45,11 +49,11 @@ function insertText(editor: TextEditor, text: string) {
   });
 }
 
-function executeFaker(name, methods) {
+function executeFaker(fakerEntity: FakerEntity) {
   window
-    .showQuickPick(methods)
+    .showQuickPick(fakerEntity.getMethods())
     .then((selectedMethod) => {
-      let generatedValue = faker[name][selectedMethod]();
+      let generatedValue = faker[fakerEntity.getName()][selectedMethod]();
       insertText(getEditor(), generatedValue);
     });
 }

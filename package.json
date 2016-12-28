@@ -20,15 +20,15 @@
     "commands": [
       {
         "command": "extension.fakerAddress",
-        "title": "Faker: address"
+        "title": "Faker: Address"
       },
       {
         "command": "extension.fakerCommerce",
-        "title": "Faker: commerce"
+        "title": "Faker: Commerce"
       },
       {
         "command": "extension.fakerCompany",
-        "title": "Faker: company"
+        "title": "Faker: Company"
       }
     ]
   },

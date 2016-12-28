@@ -1,5 +1,6 @@
+import { FakerEntity } from './faker-entity';
 
-export class Address {
+export class Address implements FakerEntity {
   public getName() {
     return 'address';
   }
