@@ -6,6 +6,7 @@ import { Date } from './date';
 import { Finance } from './finance';
 import { Hacker } from './hacker';
 import { Helpers } from './helpers';
+import { Image } from './image';
 
 export {
   FakerEntity,
@@ -15,5 +16,6 @@ export {
   Date,
   Finance,
   Hacker,
-  Helpers
+  Helpers,
+  Image
 }

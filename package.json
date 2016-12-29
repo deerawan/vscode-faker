@@ -17,7 +17,8 @@
     "onCommand:extension.fakerDate",
     "onCommand:extension.fakerFinance",
     "onCommand:extension.fakerHacker",
-    "onCommand:extension.fakerHelpers"
+    "onCommand:extension.fakerHelpers",
+    "onCommand:extension.fakerImage"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -49,6 +50,10 @@
       {
         "command": "extension.fakerHelpers",
         "title": "Faker: Helpers"
+      },
+      {
+        "command": "extension.fakerImage",
+        "title": "Faker: Image"
       }
     ]
   },

@@ -1,6 +1,6 @@
 import { TextEditor, window, ExtensionContext, commands } from 'vscode';
 import { FakerEntity, Address, Commerce, Company, Date, Finance,
-  Hacker, Helpers } from './entity';
+  Hacker, Helpers, Image } from './entity';
 const faker = require('faker');
 
 const address = new Address();
@@ -10,6 +10,7 @@ const date = new Date();
 const finance = new Finance();
 const hacker = new Hacker();
 const helpers = new Helpers();
+const image = new Image();
 
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(commands.registerCommand('extension.fakerAddress', () => {
@@ -38,6 +39,10 @@ export function activate(context: ExtensionContext) {
 
   context.subscriptions.push(commands.registerCommand('extension.fakerHelpers', () => {
     executeFaker(helpers);
+  }));
+
+  context.subscriptions.push(commands.registerCommand('extension.fakerImage', () => {
+    executeFaker(image);
   }));
 }
 
