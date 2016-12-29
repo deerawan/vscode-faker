@@ -4,6 +4,8 @@ import { Commerce } from './commerce';
 import { Company } from './company';
 import { Date } from './date';
 import { Finance } from './finance';
+import { Hacker } from './hacker';
+import { Helpers } from './helpers';
 
 export {
   FakerEntity,
@@ -11,5 +13,7 @@ export {
   Commerce,
   Company,
   Date,
-  Finance
+  Finance,
+  Hacker,
+  Helpers
 }

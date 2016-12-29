@@ -15,7 +15,9 @@
     "onCommand:extension.fakerCommerce",
     "onCommand:extension.fakerCompany",
     "onCommand:extension.fakerDate",
-    "onCommand:extension.fakerFinance"
+    "onCommand:extension.fakerFinance",
+    "onCommand:extension.fakerHacker",
+    "onCommand:extension.fakerHelpers"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -39,6 +41,14 @@
       {
         "command": "extension.fakerFinance",
         "title": "Faker: Finance"
+      },
+      {
+        "command": "extension.fakerHacker",
+        "title": "Faker: Hacker"
+      },
+      {
+        "command": "extension.fakerHelpers",
+        "title": "Faker: Helpers"
       }
     ]
   },
