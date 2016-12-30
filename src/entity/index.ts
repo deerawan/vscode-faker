@@ -7,6 +7,12 @@ import { Finance } from './finance';
 import { Hacker } from './hacker';
 import { Helpers } from './helpers';
 import { Image } from './image';
+import { Internet } from './internet';
+import { Lorem } from './lorem';
+import { Name } from './name';
+import { Phone } from './phone';
+import { Random } from './random';
+import { System } from './system';
 
 export {
   FakerEntity,
@@ -17,5 +23,11 @@ export {
   Finance,
   Hacker,
   Helpers,
-  Image
+  Image,
+  Internet,
+  Lorem,
+  Name,
+  Phone,
+  Random,
+  System,
 }
