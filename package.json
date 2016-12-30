@@ -85,16 +85,16 @@
         "command": "faker.system",
         "title": "Faker: System"
       }
-    ]
-  },
-  "configuration": {
-    "type": "object",
-    "title": "Faker Configuration",
-    "properties": {
-      "faker.locale": {
-        "type": "string",
-        "default": "en",
-        "description": "Set locale for Faker"
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Faker Configuration",
+      "properties": {
+        "faker.locale": {
+          "type": "string",
+          "default": "en",
+          "description": "Set locale for Faker"
+        }
       }
     }
   },

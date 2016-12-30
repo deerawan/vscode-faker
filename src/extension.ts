@@ -19,11 +19,13 @@ const random = new entity.Random();
 const system = new entity.System();
 
 export function activate(context: ExtensionContext) {
-  let config = workspace.getConfiguration('faker').get('faker.locale');
-  faker.locale = config['locale'];
+  faker.locale = workspace.getConfiguration('faker').get('locale');
 
-  let fakerEntities = [address, commerce, company, date, finance,
-    hacker, helpers, image, internet, lorem, name, phone, random, system];
+  let fakerEntities = [
+    address, commerce, company, date, finance,
+    hacker, helpers, image, internet, lorem, name,
+    phone, random, system
+  ];
 
   for (let entity of fakerEntities) {
     let entityName = entity.getName();
