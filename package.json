@@ -18,7 +18,13 @@
     "onCommand:extension.fakerFinance",
     "onCommand:extension.fakerHacker",
     "onCommand:extension.fakerHelpers",
-    "onCommand:extension.fakerImage"
+    "onCommand:extension.fakerImage",
+    "onCommand:extension.fakerInternet",
+    "onCommand:extension.fakerLorem",
+    "onCommand:extension.fakerName",
+    "onCommand:extension.fakerPhone",
+    "onCommand:extension.fakerRandom",
+    "onCommand:extension.fakerSystem"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -54,6 +60,30 @@
       {
         "command": "extension.fakerImage",
         "title": "Faker: Image"
+      },
+      {
+        "command": "extension.fakerInternet",
+        "title": "Faker: Internet"
+      },
+      {
+        "command": "extension.fakerLorem",
+        "title": "Faker: Lorem"
+      },
+      {
+        "command": "extension.fakerName",
+        "title": "Faker: Name"
+      },
+      {
+        "command": "extension.fakerPhone",
+        "title": "Faker: Phone"
+      },
+      {
+        "command": "extension.fakerRandom",
+        "title": "Faker: Random"
+      },
+      {
+        "command": "extension.fakerSystem",
+        "title": "Faker: System"
       }
     ]
   },
