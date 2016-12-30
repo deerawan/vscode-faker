@@ -1,49 +1,33 @@
 import { TextEditor, window, ExtensionContext, commands } from 'vscode';
-import { FakerEntity, Address, Commerce, Company, Date, Finance,
-  Hacker, Helpers, Image } from './entity';
+import * as entity from './entity';
 const faker = require('faker');
+const _ = require('lodash');
 
-const address = new Address();
-const commerce = new Commerce();
-const company = new Company();
-const date = new Date();
-const finance = new Finance();
-const hacker = new Hacker();
-const helpers = new Helpers();
-const image = new Image();
+const address = new entity.Address();
+const commerce = new entity.Commerce();
+const company = new entity.Company();
+const date = new entity.Date();
+const finance = new entity.Finance();
+const hacker = new entity.Hacker();
+const helpers = new entity.Helpers();
+const image = new entity.Image();
+const internet = new entity.Internet();
+const lorem = new entity.Lorem();
+const name = new entity.Name();
+const phone = new entity.Phone();
+const random = new entity.Random();
+const system = new entity.System();
 
 export function activate(context: ExtensionContext) {
-  context.subscriptions.push(commands.registerCommand('extension.fakerAddress', () => {
-    executeFaker(address);
-  }));
+  let fakerEntities = [address, commerce, company, date, finance,
+    hacker, helpers, image, internet, lorem, name, phone, random, system];
 
-  context.subscriptions.push(commands.registerCommand('extension.fakerCommerce', () => {
-    executeFaker(commerce);
-  }));
-
-  context.subscriptions.push(commands.registerCommand('extension.fakerCompany', () => {
-    executeFaker(company);
-  }));
-
-  context.subscriptions.push(commands.registerCommand('extension.fakerDate', () => {
-    executeFaker(date);
-  }));
-
-  context.subscriptions.push(commands.registerCommand('extension.fakerFinance', () => {
-    executeFaker(finance);
-  }));
-
-  context.subscriptions.push(commands.registerCommand('extension.fakerHacker', () => {
-    executeFaker(hacker);
-  }));
-
-  context.subscriptions.push(commands.registerCommand('extension.fakerHelpers', () => {
-    executeFaker(helpers);
-  }));
-
-  context.subscriptions.push(commands.registerCommand('extension.fakerImage', () => {
-    executeFaker(image);
-  }));
+  for (let entity of fakerEntities) {
+    let capitalizedEntityName = _.capitalize(entity.getName());
+    context.subscriptions.push(commands.registerCommand(`extension.faker${capitalizedEntityName}`, () => {
+      executeFaker(entity);
+    }));
+  }
 }
 
 export function deactivate() {
@@ -72,7 +56,7 @@ function insertText(editor: TextEditor, text: string) {
   });
 }
 
-function executeFaker(fakerEntity: FakerEntity) {
+function executeFaker(fakerEntity: entity.FakerEntity) {
   window
     .showQuickPick(fakerEntity.getMethods())
     .then((selectedMethod) => {
