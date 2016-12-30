@@ -11,81 +11,92 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.fakerAddress",
-    "onCommand:extension.fakerCommerce",
-    "onCommand:extension.fakerCompany",
-    "onCommand:extension.fakerDate",
-    "onCommand:extension.fakerFinance",
-    "onCommand:extension.fakerHacker",
-    "onCommand:extension.fakerHelpers",
-    "onCommand:extension.fakerImage",
-    "onCommand:extension.fakerInternet",
-    "onCommand:extension.fakerLorem",
-    "onCommand:extension.fakerName",
-    "onCommand:extension.fakerPhone",
-    "onCommand:extension.fakerRandom",
-    "onCommand:extension.fakerSystem"
+    "onCommand:faker.address",
+    "onCommand:faker.commerce",
+    "onCommand:faker.company",
+    "onCommand:faker.date",
+    "onCommand:faker.finance",
+    "onCommand:faker.hacker",
+    "onCommand:faker.helpers",
+    "onCommand:faker.image",
+    "onCommand:faker.internet",
+    "onCommand:faker.lorem",
+    "onCommand:faker.name",
+    "onCommand:faker.phone",
+    "onCommand:faker.random",
+    "onCommand:faker.system"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "extension.fakerAddress",
+        "command": "faker.address",
         "title": "Faker: Address"
       },
       {
-        "command": "extension.fakerCommerce",
+        "command": "faker.commerce",
         "title": "Faker: Commerce"
       },
       {
-        "command": "extension.fakerCompany",
+        "command": "faker.company",
         "title": "Faker: Company"
       },
       {
-        "command": "extension.fakerDate",
+        "command": "faker.date",
         "title": "Faker: Date"
       },
       {
-        "command": "extension.fakerFinance",
+        "command": "faker.finance",
         "title": "Faker: Finance"
       },
       {
-        "command": "extension.fakerHacker",
+        "command": "faker.hacker",
         "title": "Faker: Hacker"
       },
       {
-        "command": "extension.fakerHelpers",
+        "command": "faker.helpers",
         "title": "Faker: Helpers"
       },
       {
-        "command": "extension.fakerImage",
+        "command": "faker.image",
         "title": "Faker: Image"
       },
       {
-        "command": "extension.fakerInternet",
+        "command": "faker.internet",
         "title": "Faker: Internet"
       },
       {
-        "command": "extension.fakerLorem",
+        "command": "faker.lorem",
         "title": "Faker: Lorem"
       },
       {
-        "command": "extension.fakerName",
+        "command": "faker.name",
         "title": "Faker: Name"
       },
       {
-        "command": "extension.fakerPhone",
+        "command": "faker.phone",
         "title": "Faker: Phone"
       },
       {
-        "command": "extension.fakerRandom",
+        "command": "faker.random",
         "title": "Faker: Random"
       },
       {
-        "command": "extension.fakerSystem",
+        "command": "faker.system",
         "title": "Faker: System"
       }
     ]
+  },
+  "configuration": {
+    "type": "object",
+    "title": "Faker Configuration",
+    "properties": {
+      "faker.locale": {
+        "type": "string",
+        "default": "en",
+        "description": "Set locale for Faker"
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",

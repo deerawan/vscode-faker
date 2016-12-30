@@ -1,4 +1,4 @@
-import { TextEditor, window, ExtensionContext, commands } from 'vscode';
+import { TextEditor, window, ExtensionContext, commands, workspace } from 'vscode';
 import * as entity from './entity';
 const faker = require('faker');
 const _ = require('lodash');
@@ -19,12 +19,15 @@ const random = new entity.Random();
 const system = new entity.System();
 
 export function activate(context: ExtensionContext) {
+  let config = workspace.getConfiguration('faker').get('faker.locale');
+  faker.locale = config['locale'];
+
   let fakerEntities = [address, commerce, company, date, finance,
     hacker, helpers, image, internet, lorem, name, phone, random, system];
 
   for (let entity of fakerEntities) {
-    let capitalizedEntityName = _.capitalize(entity.getName());
-    context.subscriptions.push(commands.registerCommand(`extension.faker${capitalizedEntityName}`, () => {
+    let entityName = entity.getName();
+    context.subscriptions.push(commands.registerCommand(`faker.${entityName}`, () => {
       executeFaker(entity);
     }));
   }
