@@ -17,7 +17,6 @@
     "onCommand:faker.date",
     "onCommand:faker.finance",
     "onCommand:faker.hacker",
-    "onCommand:faker.helpers",
     "onCommand:faker.image",
     "onCommand:faker.internet",
     "onCommand:faker.lorem",
@@ -52,10 +51,6 @@
       {
         "command": "faker.hacker",
         "title": "Faker: Hacker"
-      },
-      {
-        "command": "faker.helpers",
-        "title": "Faker: Helpers"
       },
       {
         "command": "faker.image",

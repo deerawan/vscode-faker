@@ -9,7 +9,6 @@ const company = new entity.Company();
 const date = new entity.Date();
 const finance = new entity.Finance();
 const hacker = new entity.Hacker();
-const helpers = new entity.Helpers();
 const image = new entity.Image();
 const internet = new entity.Internet();
 const lorem = new entity.Lorem();
@@ -23,7 +22,7 @@ export function activate(context: ExtensionContext) {
 
   let fakerEntities = [
     address, commerce, company, date, finance,
-    hacker, helpers, image, internet, lorem, name,
+    hacker, image, internet, lorem, name,
     phone, random, system
   ];
 
