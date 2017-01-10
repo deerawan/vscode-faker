@@ -1,13 +1,23 @@
-# README
-## This is the README for your extension "y" 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# VSCode Faker
+Generate fake data inside Visual Studio Code. Fake data is based on [Faker](https://github.com/marak/Faker.js).
 
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
+## Installation
+Type <kbd>cmd<kbd><kbd>shift<kbd><kbd>p<kbd> to launch command palette and choose `Extensions: Install Extension`. Search **faker** and install.
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Usage
+### Supported Fake data
+- address
+- commerce
+- company
+- date
+- finance
+- hacker
+- image
+- internet
+- lorem
+- name
+- phone
+- random
+- system
 
-** Enjoy!**
+
