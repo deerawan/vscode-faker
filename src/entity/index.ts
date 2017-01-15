@@ -5,7 +5,6 @@ import { Company } from './company';
 import { Date } from './date';
 import { Finance } from './finance';
 import { Hacker } from './hacker';
-import { Helpers } from './helpers';
 import { Image } from './image';
 import { Internet } from './internet';
 import { Lorem } from './lorem';
@@ -22,7 +21,6 @@ export {
   Date,
   Finance,
   Hacker,
-  Helpers,
   Image,
   Internet,
   Lorem,
