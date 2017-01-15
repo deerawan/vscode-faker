@@ -5,6 +5,9 @@ Generate fake data inside Visual Studio Code. Fake data is based on [Faker](http
 Type <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> to launch command palette and choose `Extensions: Install Extension`. Search **faker** and install.
 
 ## Usage
+
+![vscode faker](https://raw.githubusercontent.com/deerawan/vscode-faker/master/images/vscode-faker.gif)
+
 1. Type <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>
 2. Choose fake data category
 3. Choose sub category
