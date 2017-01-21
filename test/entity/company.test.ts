@@ -1,4 +1,4 @@
-import * as chai from 'chai';
+const chai = require('chai');
 import { Company } from '../../src/entity/company';
 
 const expect = chai.expect;
