@@ -7,6 +7,16 @@
   "engines": {
     "vscode": "^0.10.1"
   },
+  "icon": "images/faker.png",
+  "bugs": {
+    "url": "https://github.com/deerawan/vscode-faker/issues",
+    "email": "deerawan@gmail.com"
+  },
+  "homepage": "https://github.com/deerawan/vscode-faker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deerawan/vscode-faker"
+  },
   "categories": [
     "Other"
   ],
