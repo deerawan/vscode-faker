@@ -1,8 +1,8 @@
 {
   "name": "vscode-faker",
   "displayName": "vscode-faker",
-  "description": "y",
-  "version": "0.0.1",
+  "description": "Generate fake data in Visual Studio Code",
+  "version": "1.0.0",
   "publisher": "deerawan",
   "engines": {
     "vscode": "^0.10.1"
