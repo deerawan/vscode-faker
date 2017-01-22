@@ -109,7 +109,6 @@
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/**/*.test.js"
   },
   "devDependencies": {
-    "@types/chai": "^3.4.34",
     "chai": "^3.5.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
