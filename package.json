@@ -2,7 +2,7 @@
   "name": "vscode-faker",
   "displayName": "vscode-faker",
   "description": "Generate fake data for name, address, lorem ipsum, commerce and much more",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "deerawan",
   "engines": {
     "vscode": "^0.10.1"
