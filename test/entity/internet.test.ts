@@ -26,6 +26,7 @@ suite("internet Entity Tests", () => {
       'domainSuffix',
       'domainWord',
       'ip',
+      'ipv6',
       'userAgent',
       'color',
       'mac',

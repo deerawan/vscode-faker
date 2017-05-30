@@ -10,6 +10,7 @@ export class Lorem implements FakerEntity {
       'word',
       'words',
       'sentence',
+      'slug',
       'sentences',
       'paragraph',
       'paragraphs',

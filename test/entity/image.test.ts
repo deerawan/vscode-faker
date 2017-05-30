@@ -31,7 +31,8 @@ suite("image Entity Tests", () => {
       'nature',
       'sports',
       'technics',
-      'transport'
+      'transport',
+      'dataUri'
     ]);
   });
 });

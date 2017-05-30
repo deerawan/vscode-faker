@@ -17,6 +17,7 @@ export class Internet implements FakerEntity {
       'domainSuffix',
       'domainWord',
       'ip',
+      'ipv6',
       'userAgent',
       'color',
       'mac',

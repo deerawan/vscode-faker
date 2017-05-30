@@ -2,7 +2,7 @@
   "name": "vscode-faker",
   "displayName": "vscode-faker",
   "description": "Generate fake data for name, address, lorem ipsum, commerce and much more",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "publisher": "deerawan",
   "engines": {
     "vscode": "^0.10.1"
@@ -24,6 +24,7 @@
     "onCommand:faker.address",
     "onCommand:faker.commerce",
     "onCommand:faker.company",
+    "onCommand:faker.database",
     "onCommand:faker.date",
     "onCommand:faker.finance",
     "onCommand:faker.hacker",
@@ -49,6 +50,10 @@
       {
         "command": "faker.company",
         "title": "Faker: Company"
+      },
+      {
+        "command": "faker.database",
+        "title": "Faker: Database"
       },
       {
         "command": "faker.date",
@@ -116,7 +121,7 @@
     "vscode": "0.10.x"
   },
   "dependencies": {
-    "faker": "^3.1.0",
+    "faker": "~4.1.0",
     "lodash": "^4.17.3"
   }
 }

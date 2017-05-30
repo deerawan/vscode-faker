@@ -6,6 +6,7 @@ const _ = require('lodash');
 const address = new entity.Address();
 const commerce = new entity.Commerce();
 const company = new entity.Company();
+const database = new entity.Database();
 const date = new entity.Date();
 const finance = new entity.Finance();
 const hacker = new entity.Hacker();
@@ -21,7 +22,7 @@ export function activate(context: ExtensionContext) {
   faker.locale = workspace.getConfiguration('faker').get('locale');
 
   let fakerEntities = [
-    address, commerce, company, date, finance,
+    address, commerce, company, database, date, finance,
     hacker, image, internet, lorem, name,
     phone, random, system
   ];

@@ -19,6 +19,7 @@ suite("lorem Entity Tests", () => {
       'word',
       'words',
       'sentence',
+      'slug',
       'sentences',
       'paragraph',
       'paragraphs',

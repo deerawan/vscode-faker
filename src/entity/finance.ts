@@ -15,7 +15,9 @@ export class Finance implements FakerEntity {
       'currencyCode',
       'currencyName',
       'currencySymbol',
-      'bitcoinAddress'
+      'bitcoinAddress',
+      'iban',
+      'bic'
     ];
   }
 }

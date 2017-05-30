@@ -24,7 +24,9 @@ suite("Finance Entity Tests", () => {
       'currencyCode',
       'currencyName',
       'currencySymbol',
-      'bitcoinAddress'
+      'bitcoinAddress',
+      'iban',
+      'bic'
     ]);
   });
 });

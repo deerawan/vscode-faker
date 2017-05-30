@@ -2,6 +2,7 @@ import { FakerEntity } from './faker-entity';
 import { Address } from './address';
 import { Commerce } from './commerce';
 import { Company } from './company';
+import { Database } from './database';
 import { Date } from './date';
 import { Finance } from './finance';
 import { Hacker } from './hacker';
@@ -18,6 +19,7 @@ export {
   Address,
   Commerce,
   Company,
+  Database,
   Date,
   Finance,
   Hacker,

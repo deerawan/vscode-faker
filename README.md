@@ -5,6 +5,7 @@ Fake data you can generate:
 - address
 - commerce
 - company
+- database
 - date
 - finance
 - hacker
