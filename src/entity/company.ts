@@ -17,7 +17,7 @@ export class Company implements FakerEntity {
       'catchPhraseNoun',
       'bsAdjective',
       'bsBuzz',
-      'bsNoun'
+      'bsNoun',
     ];
   }
 }

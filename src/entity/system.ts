@@ -16,7 +16,7 @@ export class System implements FakerEntity {
       'fileExt',
       'directoryPath',
       'filePath',
-      'semver'
-    ]
+      'semver',
+    ];
   }
 }

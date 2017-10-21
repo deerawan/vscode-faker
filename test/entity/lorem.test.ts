@@ -3,18 +3,18 @@ import { Lorem } from '../../src/entity/lorem';
 
 const expect = chai.expect;
 
-suite("lorem Entity Tests", () => {
+suite('lorem Entity Tests', () => {
   let lorem;
 
   before(function() {
     lorem = new Lorem();
   });
 
-  test("has name", () => {
+  test('has name', () => {
     expect(lorem.getName()).to.equal('lorem');
   });
 
-  test("has method", () => {
+  test('has method', () => {
     expect(lorem.getMethods()).to.eql([
       'word',
       'words',
@@ -24,7 +24,7 @@ suite("lorem Entity Tests", () => {
       'paragraph',
       'paragraphs',
       'text',
-      'lines'
+      'lines',
     ]);
   });
 });

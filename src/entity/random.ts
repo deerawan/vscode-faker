@@ -16,7 +16,7 @@ export class Random implements FakerEntity {
       'words',
       'image',
       'locale',
-      'alphaNumeric'
-    ]
+      'alphaNumeric',
+    ];
   }
 }

@@ -15,7 +15,7 @@ export class Lorem implements FakerEntity {
       'paragraph',
       'paragraphs',
       'text',
-      'lines'
-    ]
+      'lines',
+    ];
   }
 }
