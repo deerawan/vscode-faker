@@ -3,18 +3,18 @@ import { Internet } from '../../src/entity/internet';
 
 const expect = chai.expect;
 
-suite("internet Entity Tests", () => {
+suite('internet Entity Tests', () => {
   let internet;
 
   before(function() {
     internet = new Internet();
   });
 
-  test("has name", () => {
+  test('has name', () => {
     expect(internet.getName()).to.equal('internet');
   });
 
-  test("has method", () => {
+  test('has method', () => {
     expect(internet.getMethods()).to.eql([
       'avatar',
       'email',
@@ -30,7 +30,7 @@ suite("internet Entity Tests", () => {
       'userAgent',
       'color',
       'mac',
-      'password'
+      'password',
     ]);
   });
 });

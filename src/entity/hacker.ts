@@ -6,13 +6,6 @@ export class Hacker implements FakerEntity {
   }
 
   public getMethods() {
-    return [
-      'abbreviation',
-      'adjective',
-      'noun',
-      'verb',
-      'ingverb',
-      'phrase'
-    ]
+    return ['abbreviation', 'adjective', 'noun', 'verb', 'ingverb', 'phrase'];
   }
 }

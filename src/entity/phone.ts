@@ -6,10 +6,6 @@ export class Phone implements FakerEntity {
   }
 
   public getMethods() {
-    return [
-      'phoneNumber',
-      'phoneNumberFormat',
-      'phoneFormats'
-    ]
+    return ['phoneNumber', 'phoneNumberFormat', 'phoneFormats'];
   }
 }

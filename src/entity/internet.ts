@@ -21,7 +21,7 @@ export class Internet implements FakerEntity {
       'userAgent',
       'color',
       'mac',
-      'password'
-    ]
+      'password',
+    ];
   }
 }

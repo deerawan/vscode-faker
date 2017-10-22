@@ -23,7 +23,7 @@ export class Image implements FakerEntity {
       'sports',
       'technics',
       'transport',
-      'dataUri'
-    ]
+      'dataUri',
+    ];
   }
 }

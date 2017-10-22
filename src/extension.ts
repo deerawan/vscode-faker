@@ -1,4 +1,10 @@
-import { TextEditor, window, ExtensionContext, commands, workspace } from 'vscode';
+import {
+  TextEditor,
+  window,
+  ExtensionContext,
+  commands,
+  workspace,
+} from 'vscode';
 import * as entity from './entity';
 const faker = require('faker');
 const _ = require('lodash');
@@ -21,28 +27,40 @@ const system = new entity.System();
 export function activate(context: ExtensionContext) {
   faker.locale = workspace.getConfiguration('faker').get('locale');
 
-  let fakerEntities = [
-    address, commerce, company, database, date, finance,
-    hacker, image, internet, lorem, name,
-    phone, random, system
+  const fakerEntities = [
+    address,
+    commerce,
+    company,
+    database,
+    date,
+    finance,
+    hacker,
+    image,
+    internet,
+    lorem,
+    name,
+    phone,
+    random,
+    system,
   ];
 
-  for (let entity of fakerEntities) {
-    let entityName = entity.getName();
-    context.subscriptions.push(commands.registerCommand(`faker.${entityName}`, () => {
-      executeFaker(entity);
-    }));
+  for (const entity of fakerEntities) {
+    const entityName = entity.getName();
+    context.subscriptions.push(
+      commands.registerCommand(`faker.${entityName}`, () => {
+        executeFaker(entity);
+      })
+    );
   }
 }
 
-export function deactivate() {
-}
+export function deactivate() {}
 
 /**
  * Get vscode active editor
  */
 function getEditor(): TextEditor {
-  var editor = window.activeTextEditor;
+  const editor = window.activeTextEditor;
   if (!editor) {
     return;
   }
@@ -62,10 +80,8 @@ function insertText(editor: TextEditor, text: string) {
 }
 
 function executeFaker(fakerEntity: entity.FakerEntity) {
-  window
-    .showQuickPick(fakerEntity.getMethods())
-    .then((selectedMethod) => {
-      let generatedValue = faker[fakerEntity.getName()][selectedMethod]();
-      insertText(getEditor(), generatedValue);
-    });
+  window.showQuickPick(fakerEntity.getMethods()).then(selectedMethod => {
+    const generatedValue = faker[fakerEntity.getName()][selectedMethod]();
+    insertText(getEditor(), generatedValue);
+  });
 }

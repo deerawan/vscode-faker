@@ -6,11 +6,6 @@ export class Database implements FakerEntity {
   }
 
   public getMethods() {
-    return [
-      'column',
-      'type',
-      'collation',
-      'engine'
-    ];
+    return ['column', 'type', 'collation', 'engine'];
   }
 }

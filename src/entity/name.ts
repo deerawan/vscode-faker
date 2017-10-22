@@ -16,7 +16,7 @@ export class Name implements FakerEntity {
       'title',
       'jobDescriptor',
       'jobArea',
-      'jobType'
-    ]
+      'jobType',
+    ];
   }
 }

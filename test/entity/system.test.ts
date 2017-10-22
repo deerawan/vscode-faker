@@ -3,18 +3,18 @@ import { System } from '../../src/entity/system';
 
 const expect = chai.expect;
 
-suite("system Entity Tests", () => {
+suite('system Entity Tests', () => {
   let system;
 
   before(function() {
     system = new System();
   });
 
-  test("has name", () => {
+  test('has name', () => {
     expect(system.getName()).to.equal('system');
   });
 
-  test("has method", () => {
+  test('has method', () => {
     expect(system.getMethods()).to.eql([
       'fileName',
       'commonFileName',
@@ -25,7 +25,7 @@ suite("system Entity Tests", () => {
       'fileExt',
       'directoryPath',
       'filePath',
-      'semver'
+      'semver',
     ]);
   });
 });

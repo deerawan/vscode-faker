@@ -3,18 +3,18 @@ import { Random } from '../../src/entity/random';
 
 const expect = chai.expect;
 
-suite("Random Entity Tests", () => {
+suite('Random Entity Tests', () => {
   let random;
 
   before(function() {
     random = new Random();
   });
 
-  test("has name", () => {
+  test('has name', () => {
     expect(random.getName()).to.equal('random');
   });
 
-  test("has method", () => {
+  test('has method', () => {
     expect(random.getMethods()).to.eql([
       'number',
       'arrayElement',
@@ -25,7 +25,7 @@ suite("Random Entity Tests", () => {
       'words',
       'image',
       'locale',
-      'alphaNumeric'
+      'alphaNumeric',
     ]);
   });
 });

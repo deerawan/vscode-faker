@@ -23,6 +23,6 @@ export class Address implements FakerEntity {
       'stateAbbr',
       'latitude',
       'longitude',
-    ]
+    ];
   }
 }
