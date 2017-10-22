@@ -71,17 +71,22 @@ function getEditor(): TextEditor {
 /**
  * Insert text in editor
  */
-function insertText(editor: TextEditor, text: string) {
-  const position = editor.selection.active;
+function insertText(editor: TextEditor, generateFakeFn: () => string) {
+  const { selections } = editor;
 
   editor.edit(function(editBuilder) {
-    editBuilder.insert(position, text);
+    selections.forEach(selection => {
+      const position = selection.active;
+      editBuilder.insert(position, generateFakeFn());
+    });
   });
 }
 
 function executeFaker(fakerEntity: entity.FakerEntity) {
-  window.showQuickPick(fakerEntity.getMethods()).then(selectedMethod => {
-    const generatedValue = faker[fakerEntity.getName()][selectedMethod]();
-    insertText(getEditor(), generatedValue);
-  });
+  window
+    .showQuickPick(fakerEntity.getMethods())
+    .then((selectedMethod: string) => {
+      const generateFakeFn = faker[fakerEntity.getName()][selectedMethod];
+      insertText(getEditor(), generateFakeFn);
+    });
 }
