@@ -78,7 +78,7 @@ function insertText(editor: TextEditor, generateFakeFn: () => string) {
     selections.forEach(selection => {
       const position = selection.active;
       editBuilder.insert(position, generateFakeFn());
-    })    
+    });
   });
 }
 
