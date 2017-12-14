@@ -1,8 +1,9 @@
 {
   "name": "vscode-faker",
   "displayName": "vscode-faker",
-  "description": "Generate fake data for name, address, lorem ipsum, commerce and much more",
-  "version": "1.2.0",
+  "description":
+    "Generate fake data for name, address, lorem ipsum, commerce and much more",
+  "version": "1.2.1",
   "publisher": "deerawan",
   "engines": {
     "vscode": "^0.10.1"
@@ -17,9 +18,7 @@
     "type": "git",
     "url": "https://github.com/deerawan/vscode-faker"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "activationEvents": [
     "onCommand:faker.address",
     "onCommand:faker.commerce",
@@ -111,7 +110,8 @@
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
     "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/**/*.test.js",
+    "test":
+      "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec --ui tdd ./out/test/**/*.test.js",
     "precommit": "lint-staged",
     "format": "prettier --write \"{src,test}/**/*.ts\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' --fix"
@@ -130,17 +130,10 @@
     "vscode": "0.10.x"
   },
   "dependencies": {
-    "faker": "~4.1.0",
-    "lodash": "^4.17.3"
+    "faker": "~4.1.0"
   },
   "lint-staged": {
-    "*.{ts,json}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.ts": [
-      "tslint --fix",
-      "tslint"
-    ]
+    "*.{ts,json}": ["prettier --write", "git add"],
+    "*.ts": ["tslint --fix", "tslint"]
   }
 }

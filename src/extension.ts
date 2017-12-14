@@ -7,7 +7,6 @@ import {
 } from 'vscode';
 import * as entity from './entity';
 const faker = require('faker');
-const _ = require('lodash');
 
 const address = new entity.Address();
 const commerce = new entity.Commerce();
@@ -77,7 +76,8 @@ function insertText(editor: TextEditor, generateFakeFn: () => string) {
   editor.edit(function(editBuilder) {
     selections.forEach(selection => {
       const position = selection.active;
-      editBuilder.insert(position, generateFakeFn());
+      const value = generateFakeFn().toString();
+      editBuilder.insert(position, value);
     });
   });
 }
