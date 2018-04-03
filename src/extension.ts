@@ -4,6 +4,7 @@ import {
   ExtensionContext,
   commands,
   workspace,
+  Range,
 } from 'vscode';
 import * as entity from './entity';
 const faker = require('faker');
@@ -46,9 +47,9 @@ export function activate(context: ExtensionContext) {
   for (const entity of fakerEntities) {
     const entityName = entity.getName();
     context.subscriptions.push(
-      commands.registerCommand(`faker.${entityName}`, () => {
-        executeFaker(entity);
-      })
+      commands.registerCommand(`faker.${entityName}`, () =>
+        executeFaker(entity)
+      )
     );
   }
 }
@@ -73,20 +74,21 @@ function getEditor(): TextEditor {
 function insertText(editor: TextEditor, generateFakeFn: () => string) {
   const { selections } = editor;
 
-  editor.edit(function(editBuilder) {
+  editor.edit(editBuilder => {
     selections.forEach(selection => {
-      const position = selection.active;
+      const { start, end } = selection;
+      const range = new Range(start, end);
+
       const value = generateFakeFn().toString();
-      editBuilder.insert(position, value);
+
+      editBuilder.replace(range, value);
     });
   });
 }
 
 function executeFaker(fakerEntity: entity.FakerEntity) {
-  window
-    .showQuickPick(fakerEntity.getMethods())
-    .then((selectedMethod: string) => {
-      const generateFakeFn = faker[fakerEntity.getName()][selectedMethod];
-      insertText(getEditor(), generateFakeFn);
-    });
+  window.showQuickPick(fakerEntity.getMethods()).then(selectedMethod => {
+    const generateFakeFn = faker[fakerEntity.getName()][selectedMethod];
+    insertText(getEditor(), generateFakeFn);
+  });
 }
