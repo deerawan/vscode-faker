@@ -3,18 +3,18 @@ import { Commerce } from '../../src/entity/commerce';
 
 const expect = chai.expect;
 
-suite('Commerce Entity Tests', () => {
+describe('Commerce Entity Tests', () => {
   let commerce;
 
   before(function() {
     commerce = new Commerce();
   });
 
-  test('has name', () => {
+  it('has name', () => {
     expect(commerce.getName()).to.equal('commerce');
   });
 
-  test('has method', () => {
+  it('has method', () => {
     expect(commerce.getMethods()).to.eql([
       'color',
       'department',

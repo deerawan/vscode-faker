@@ -3,18 +3,18 @@ import { Phone } from '../../src/entity/phone';
 
 const expect = chai.expect;
 
-suite('Phone Entity Tests', () => {
+describe('Phone Entity Tests', () => {
   let phone;
 
   before(function() {
     phone = new Phone();
   });
 
-  test('has name', () => {
+  it('has name', () => {
     expect(phone.getName()).to.equal('phone');
   });
 
-  test('has method', () => {
+  it('has method', () => {
     expect(phone.getMethods()).to.eql([
       'phoneNumber',
       'phoneNumberFormat',

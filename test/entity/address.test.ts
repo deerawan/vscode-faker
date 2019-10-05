@@ -3,18 +3,18 @@ import { Address } from '../../src/entity/address';
 
 const expect = chai.expect;
 
-suite('Address Entity Tests', () => {
+describe('Address Entity Tests', () => {
   let address;
 
   before(function() {
     address = new Address();
   });
 
-  test('has name', () => {
+  it('has name', () => {
     expect(address.getName()).to.equal('address');
   });
 
-  test('has method', () => {
+  it('has method', () => {
     expect(address.getMethods()).to.eql([
       'zipCode',
       'city',

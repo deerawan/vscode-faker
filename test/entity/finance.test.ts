@@ -3,18 +3,18 @@ import { Finance } from '../../src/entity/finance';
 
 const expect = chai.expect;
 
-suite('Finance Entity Tests', () => {
+describe('Finance Entity Tests', () => {
   let finance;
 
   before(function() {
     finance = new Finance();
   });
 
-  test('has name', () => {
+  it('has name', () => {
     expect(finance.getName()).to.equal('finance');
   });
 
-  test('has method', () => {
+  it('has method', () => {
     expect(finance.getMethods()).to.eql([
       'account',
       'accountName',

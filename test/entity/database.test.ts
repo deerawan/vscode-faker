@@ -3,18 +3,18 @@ import { Database } from '../../src/entity/database';
 
 const expect = chai.expect;
 
-suite('Database Entity Tests', () => {
+describe('Database Entity Tests', () => {
   let database;
 
   before(function() {
     database = new Database();
   });
 
-  test('has name', () => {
+  it('has name', () => {
     expect(database.getName()).to.equal('database');
   });
 
-  test('has method', () => {
+  it('has method', () => {
     expect(database.getMethods()).to.eql([
       'column',
       'type',

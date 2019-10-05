@@ -3,18 +3,18 @@ import { Company } from '../../src/entity/company';
 
 const expect = chai.expect;
 
-suite('Company Entity Tests', () => {
+describe('Company Entity Tests', () => {
   let company;
 
   before(function() {
     company = new Company();
   });
 
-  test('has name', () => {
+  it('has name', () => {
     expect(company.getName()).to.equal('company');
   });
 
-  test('has method', () => {
+  it('has method', () => {
     expect(company.getMethods()).to.eql([
       'suffixes',
       'companyName',

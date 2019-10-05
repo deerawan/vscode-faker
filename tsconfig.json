@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "ES5",
+    "target": "es6",
+    "lib": ["es6"],
     "outDir": "out",
-    "noLib": true,
     "sourceMap": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "moduleResolution": "node",
+    "rootDir": "."
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".vscode-test"]
 }
