@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '4.2'
+  - '10.9.0'
 install:
   - 'npm install'
 script:
