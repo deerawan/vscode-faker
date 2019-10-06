@@ -3,18 +3,18 @@ import { Hacker } from '../../src/entity/hacker';
 
 const expect = chai.expect;
 
-suite('Hacker Entity Tests', () => {
+describe('Hacker Entity Tests', () => {
   let hacker;
 
   before(function() {
     hacker = new Hacker();
   });
 
-  test('has name', () => {
+  it('has name', () => {
     expect(hacker.getName()).to.equal('hacker');
   });
 
-  test('has method', () => {
+  it('has method', () => {
     expect(hacker.getMethods()).to.eql([
       'abbreviation',
       'adjective',

@@ -3,18 +3,18 @@ import { Image } from '../../src/entity/image';
 
 const expect = chai.expect;
 
-suite('image Entity Tests', () => {
+describe('image Entity Tests', () => {
   let image;
 
   before(function() {
     image = new Image();
   });
 
-  test('has name', () => {
+  it('has name', () => {
     expect(image.getName()).to.equal('image');
   });
 
-  test('has method', () => {
+  it('has method', () => {
     expect(image.getMethods()).to.eql([
       'image',
       'avatar',
