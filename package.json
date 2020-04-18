@@ -121,6 +121,7 @@
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^0.1.3",
     "@types/chai": "^4.2.3",
+    "@types/faker": "^4.1.11",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.11",
     "chai": "^3.5.0",

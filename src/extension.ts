@@ -7,7 +7,7 @@ import {
   Range,
 } from 'vscode';
 import * as entity from './entity';
-const faker = require('faker');
+import { fakerFactory } from './faker-factory';
 
 const address = new entity.Address();
 const commerce = new entity.Commerce();
@@ -24,8 +24,12 @@ const phone = new entity.Phone();
 const random = new entity.Random();
 const system = new entity.System();
 
-export function activate(context: ExtensionContext) {
-  faker.locale = workspace.getConfiguration('faker').get('locale');
+export async function activate(context: ExtensionContext) {
+  const configLocale: string = workspace
+    .getConfiguration('faker')
+    .get('locale');
+
+  const faker = await fakerFactory(configLocale);
 
   const fakerEntities = [
     address,
@@ -46,9 +50,10 @@ export function activate(context: ExtensionContext) {
 
   for (const entity of fakerEntities) {
     const entityName = entity.getName();
+
     context.subscriptions.push(
       commands.registerCommand(`faker.${entityName}`, () =>
-        executeFaker(entity)
+        executeFaker(faker, entity)
       )
     );
   }
@@ -86,9 +91,13 @@ function insertText(editor: TextEditor, generateFakeFn: () => string) {
   });
 }
 
-function executeFaker(fakerEntity: entity.FakerEntity) {
-  window.showQuickPick(fakerEntity.getMethods()).then(selectedMethod => {
-    const generateFakeFn = faker[fakerEntity.getName()][selectedMethod];
-    insertText(getEditor(), generateFakeFn);
-  });
+async function executeFaker(faker: any, fakerEntity: entity.FakerEntity) {
+  const selectedMethod = await window.showQuickPick(fakerEntity.getMethods());
+
+  if (!selectedMethod) {
+    return;
+  }
+
+  const generateFakeFn = faker[fakerEntity.getName()][selectedMethod];
+  insertText(getEditor(), generateFakeFn);
 }
