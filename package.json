@@ -130,7 +130,7 @@
     "lint-staged": "^4.3.0",
     "mocha": "^6.2.1",
     "nyc": "^14.1.1",
-    "prettier": "^1.7.4",
+    "prettier": "^2.0.4",
     "ts-node": "^8.4.1",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.6.0",
