@@ -6,7 +6,6 @@ out/test/**
 src/**
 typings/**
 test/**
-node_modules/**
 tsconfig.json
 tslint.json
 .editorconfig
