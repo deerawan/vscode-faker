@@ -7,7 +7,6 @@ src/**
 typings/**
 test/**
 node_modules/**
-images/**
 tsconfig.json
 tslint.json
 .editorconfig
