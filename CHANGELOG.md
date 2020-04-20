@@ -1,3 +1,10 @@
+# Changelog
+
+## 1.4.0
+
+- convert locale field in setting from free text to dropdown
+- improve vscodeignore to ignore some files and folders
+
 ## 1.3.1
 
 fix performance issue by loading Faker based on locale set in config
