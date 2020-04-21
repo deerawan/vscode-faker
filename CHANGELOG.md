@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1
+
+- include `node_modules` folder in `.vscodeignore`
+
 ## 1.4.0
 
 - convert locale field in setting from free text to dropdown
