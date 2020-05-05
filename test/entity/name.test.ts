@@ -18,7 +18,7 @@ describe('Name Entity Tests', () => {
     expect(name.getMethods()).to.eql([
       'firstName',
       'lastName',
-      'findName',
+      'fullName',
       'jobTitle',
       'prefix',
       'suffix',
