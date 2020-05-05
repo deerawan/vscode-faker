@@ -9,7 +9,7 @@ export class Name implements FakerEntity {
     return [
       'firstName',
       'lastName',
-      'findName',
+      'fullName',
       'jobTitle',
       'prefix',
       'suffix',
