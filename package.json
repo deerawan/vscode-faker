@@ -2,7 +2,7 @@
   "name": "vscode-faker",
   "displayName": "vscode-faker",
   "description": "Generate fake data for name, address, lorem ipsum, commerce and much more",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "publisher": "deerawan",
   "engines": {
     "node": ">8.12.0",
@@ -39,7 +39,6 @@
     "onCommand:faker.system",
     "onCommand:faker.time",
     "onCommand:faker.vehicle"
-
   ],
   "main": "./out/src/extension",
   "contributes": {
