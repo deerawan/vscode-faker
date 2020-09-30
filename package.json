@@ -162,7 +162,7 @@
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^0.1.3",
     "@types/chai": "^4.2.3",
-    "@types/faker": "^4.1.11",
+    "@types/faker": "^5.1.2",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.11",
     "chai": "^3.5.0",
@@ -179,7 +179,7 @@
     "vscode": "^1.1.36"
   },
   "dependencies": {
-    "faker": "~4.1.0"
+    "faker": "~5.1.0"
   },
   "lint-staged": {
     "*.{ts,json}": [
