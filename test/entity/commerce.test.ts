@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('Commerce Entity Tests', () => {
   let commerce;
 
-  before(function() {
+  before(function () {
     commerce = new Commerce();
   });
 
@@ -23,6 +23,7 @@ describe('Commerce Entity Tests', () => {
       'productAdjective',
       'productMaterial',
       'product',
+      'productDescription',
     ]);
   });
 });

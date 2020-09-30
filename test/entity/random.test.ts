@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('Random Entity Tests', () => {
   let random;
 
-  before(function() {
+  before(function () {
     random = new Random();
   });
 
@@ -17,7 +17,9 @@ describe('Random Entity Tests', () => {
   it('has method', () => {
     expect(random.getMethods()).to.eql([
       'number',
+      'float',
       'arrayElement',
+      'arrayElements',
       'objectElement',
       'uuid',
       'boolean',
@@ -25,7 +27,9 @@ describe('Random Entity Tests', () => {
       'words',
       'image',
       'locale',
+      'alpha',
       'alphaNumeric',
+      'hexaDecimal',
     ]);
   });
 });

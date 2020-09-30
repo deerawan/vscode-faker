@@ -8,7 +8,9 @@ export class Random implements FakerEntity {
   public getMethods() {
     return [
       'number',
+      'float',
       'arrayElement',
+      'arrayElements',
       'objectElement',
       'uuid',
       'boolean',
@@ -16,7 +18,9 @@ export class Random implements FakerEntity {
       'words',
       'image',
       'locale',
+      'alpha',
       'alphaNumeric',
+      'hexaDecimal',
     ];
   }
 }

@@ -28,6 +28,7 @@
     "onCommand:faker.database",
     "onCommand:faker.date",
     "onCommand:faker.finance",
+    "onCommand:faker.git",
     "onCommand:faker.hacker",
     "onCommand:faker.image",
     "onCommand:faker.internet",
@@ -35,7 +36,10 @@
     "onCommand:faker.name",
     "onCommand:faker.phone",
     "onCommand:faker.random",
-    "onCommand:faker.system"
+    "onCommand:faker.system",
+    "onCommand:faker.time",
+    "onCommand:faker.vehicle"
+
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -63,6 +67,10 @@
       {
         "command": "faker.finance",
         "title": "Faker: Finance"
+      },
+      {
+        "command": "faker.git",
+        "title": "Faker: Git"
       },
       {
         "command": "faker.hacker",
@@ -95,6 +103,14 @@
       {
         "command": "faker.system",
         "title": "Faker: System"
+      },
+      {
+        "command": "faker.time",
+        "title": "Faker: Time"
+      },
+      {
+        "command": "faker.vehicle",
+        "title": "Faker: Vehicle"
       }
     ],
     "configuration": {
@@ -106,12 +122,14 @@
           "default": "en",
           "enum": [
             "az",
+            "ar",
             "cz",
             "de",
             "de_AT",
             "de_CH",
             "en",
             "en_AU",
+            "en_AU_ocker",
             "en_BORK",
             "en_CA",
             "en_GB",
@@ -119,12 +137,13 @@
             "en_IND",
             "en_US",
             "en_ZA",
-            "en_au_ocker",
             "es",
             "es_MX",
             "fa",
+            "fi",
             "fr",
             "fr_CA",
+            "fr_CH",
             "ge",
             "id_ID",
             "it",
@@ -133,9 +152,11 @@
             "nb_NO",
             "nep",
             "nl",
+            "nl_BE",
             "pl",
             "pt_BR",
             "pt_PT",
+            "ro",
             "ru",
             "sk",
             "sv",

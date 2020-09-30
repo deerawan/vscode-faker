@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('Finance Entity Tests', () => {
   let finance;
 
-  before(function() {
+  before(function () {
     finance = new Finance();
   });
 
@@ -18,6 +18,7 @@ describe('Finance Entity Tests', () => {
     expect(finance.getMethods()).to.eql([
       'account',
       'accountName',
+      'routingNumber',
       'mask',
       'amount',
       'transactionType',
@@ -25,8 +26,13 @@ describe('Finance Entity Tests', () => {
       'currencyName',
       'currencySymbol',
       'bitcoinAddress',
+      'litecoinAddress',
+      'creditCardNumber',
+      'creditCardCVV',
+      'ethereumAddress',
       'iban',
       'bic',
+      'transactionDescription',
     ]);
   });
 });

@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('Date Entity Tests', () => {
   let date;
 
-  before(function() {
+  before(function () {
     date = new Date();
   });
 
@@ -20,6 +20,7 @@ describe('Date Entity Tests', () => {
       'future',
       'between',
       'recent',
+      'soon',
       'month',
       'weekday',
     ]);

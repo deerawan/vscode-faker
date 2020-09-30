@@ -14,6 +14,7 @@ export class Commerce implements FakerEntity {
       'productAdjective',
       'productMaterial',
       'product',
+      'productDescription',
     ];
   }
 }

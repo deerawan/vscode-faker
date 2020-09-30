@@ -9,6 +9,7 @@ export class Finance implements FakerEntity {
     return [
       'account',
       'accountName',
+      'routingNumber',
       'mask',
       'amount',
       'transactionType',
@@ -16,8 +17,13 @@ export class Finance implements FakerEntity {
       'currencyName',
       'currencySymbol',
       'bitcoinAddress',
+      'litecoinAddress',
+      'creditCardNumber',
+      'creditCardCVV',
+      'ethereumAddress',
       'iban',
       'bic',
+      'transactionDescription',
     ];
   }
 }

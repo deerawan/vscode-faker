@@ -8,6 +8,7 @@ export class Address implements FakerEntity {
   public getMethods() {
     return [
       'zipCode',
+      'zipCodeByState',
       'city',
       'cityPrefix',
       'citySuffix',
@@ -23,6 +24,11 @@ export class Address implements FakerEntity {
       'stateAbbr',
       'latitude',
       'longitude',
+      'direction',
+      'cardinalDirection',
+      'ordinalDirection',
+      'nearbyGPSCoordinate',
+      'timeZone',
     ];
   }
 }

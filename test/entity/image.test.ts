@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('image Entity Tests', () => {
   let image;
 
-  before(function() {
+  before(function () {
     image = new Image();
   });
 
@@ -33,6 +33,9 @@ describe('image Entity Tests', () => {
       'technics',
       'transport',
       'dataUri',
+      'lorempixel',
+      'unsplash',
+      'lorempicsum',
     ]);
   });
 });
