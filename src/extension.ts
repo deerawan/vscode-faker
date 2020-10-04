@@ -17,7 +17,6 @@ const date = new entity.Date();
 const finance = new entity.Finance();
 const git = new entity.Git();
 const hacker = new entity.Hacker();
-const helpers = new entity.Helpers();
 const image = new entity.Image();
 const internet = new entity.Internet();
 const lorem = new entity.Lorem();
@@ -44,7 +43,6 @@ export async function activate(context: ExtensionContext) {
     finance,
     git,
     hacker,
-    helpers,
     image,
     internet,
     lorem,
