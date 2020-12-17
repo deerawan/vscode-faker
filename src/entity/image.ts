@@ -24,6 +24,9 @@ export class Image implements FakerEntity {
       'technics',
       'transport',
       'dataUri',
+      'lorempixel',
+      'unsplash',
+      'lorempicsum',
     ];
   }
 }

@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('Name Entity Tests', () => {
   let name;
 
-  before(function() {
+  before(function () {
     name = new Name();
   });
 
@@ -20,6 +20,7 @@ describe('Name Entity Tests', () => {
       'lastName',
       'findName',
       'jobTitle',
+      'gender',
       'prefix',
       'suffix',
       'title',

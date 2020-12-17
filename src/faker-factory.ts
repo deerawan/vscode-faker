@@ -2,6 +2,8 @@ export function fakerFactory(locale: string) {
   switch (locale) {
     case 'az':
       return import('faker/locale/az');
+    case 'ar':
+      return import('faker/locale/ar');
     case 'cz':
       return import('faker/locale/cz');
     case 'de':
@@ -14,6 +16,8 @@ export function fakerFactory(locale: string) {
       return import('faker/locale/en');
     case 'en_AU':
       return import('faker/locale/en_AU');
+    case 'en_AU_ocker':
+      return import('faker/locale/en_AU_ocker');
     case 'en_BORK':
       return import('faker/locale/en_BORK');
     case 'en_CA':
@@ -26,18 +30,22 @@ export function fakerFactory(locale: string) {
       return import('faker/locale/en_IND');
     case 'en_US':
       return import('faker/locale/en_US');
-    case 'en_au_ocker':
-      return import('faker/locale/en_au_ocker');
+    case 'en_ZA':
+      return import('faker/locale/en_ZA');
     case 'es':
       return import('faker/locale/es');
     case 'es_MX':
       return import('faker/locale/es_MX');
     case 'fa':
       return import('faker/locale/fa');
+    case 'fi':
+      return import('faker/locale/fi');
     case 'fr':
       return import('faker/locale/fr');
     case 'fr_CA':
       return import('faker/locale/fr_CA');
+    case 'fr_CH':
+      return import('faker/locale/fr_CH');
     case 'ge':
       return import('faker/locale/ge');
     case 'id_ID':
@@ -54,10 +62,16 @@ export function fakerFactory(locale: string) {
       return import('faker/locale/nep');
     case 'nl':
       return import('faker/locale/nl');
+    case 'nl_BE':
+      return import('faker/locale/nl_BE');
     case 'pl':
       return import('faker/locale/pl');
     case 'pt_BR':
       return import('faker/locale/pt_BR');
+    case 'pt_PT':
+      return import('faker/locale/pt_PT');
+    case 'ro':
+      return import('faker/locale/ro');
     case 'ru':
       return import('faker/locale/ru');
     case 'sk':

@@ -11,6 +11,7 @@ export class Name implements FakerEntity {
       'lastName',
       'findName',
       'jobTitle',
+      'gender',
       'prefix',
       'suffix',
       'title',

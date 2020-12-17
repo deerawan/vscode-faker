@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('Address Entity Tests', () => {
   let address;
 
-  before(function() {
+  before(function () {
     address = new Address();
   });
 
@@ -17,6 +17,7 @@ describe('Address Entity Tests', () => {
   it('has method', () => {
     expect(address.getMethods()).to.eql([
       'zipCode',
+      'zipCodeByState',
       'city',
       'cityPrefix',
       'citySuffix',
@@ -32,6 +33,11 @@ describe('Address Entity Tests', () => {
       'stateAbbr',
       'latitude',
       'longitude',
+      'direction',
+      'cardinalDirection',
+      'ordinalDirection',
+      'nearbyGPSCoordinate',
+      'timeZone',
     ]);
   });
 });

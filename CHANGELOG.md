@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0
+
+- Add support for Faker v5.1
+
 ## 1.4.1
 
 - include `node_modules` folder in `.vscodeignore`
