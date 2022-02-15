@@ -172,7 +172,6 @@
   },
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
     "compile": "tsc -watch -p ./",
     "test": "nyc ts-mocha './test/**/*.test.ts'",
     "precommit": "lint-staged",
@@ -185,6 +184,7 @@
     "@types/faker": "^5.1.2",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.11",
+    "@types/vscode": "^1.64.0",
     "chai": "^3.5.0",
     "coveralls": "^3.0.6",
     "husky": "^0.14.3",
