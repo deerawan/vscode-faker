@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Vehicle } from '../../src/entity/vehicle';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Vehicle Entity Tests', () => {
-  let vehicle;
-
-  before(function () {
-    vehicle = new Vehicle();
-  });
+  const vehicle = new Vehicle();
 
   it('has name', () => {
-    expect(vehicle.getName()).to.equal('vehicle');
+    expect(vehicle.getName()).toEqual('vehicle');
   });
 
   it('has method', () => {
-    expect(vehicle.getMethods()).to.eql([
+    expect(vehicle.getMethods()).toEqual([
       'vehicle',
       'manufacturer',
       'model',
@@ -25,4 +19,6 @@ describe('Vehicle Entity Tests', () => {
       'color',
     ]);
   });
+
+  itShouldReturnFakerValue(vehicle);
 });

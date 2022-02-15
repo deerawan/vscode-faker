@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Name } from '../../src/entity/name';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Name Entity Tests', () => {
-  let name;
-
-  before(function () {
-    name = new Name();
-  });
+  const name = new Name();
 
   it('has name', () => {
-    expect(name.getName()).to.equal('name');
+    expect(name.getName()).toEqual('name');
   });
 
   it('has method', () => {
-    expect(name.getMethods()).to.eql([
+    expect(name.getMethods()).toEqual([
       'firstName',
       'lastName',
       'findName',
@@ -29,4 +23,6 @@ describe('Name Entity Tests', () => {
       'jobType',
     ]);
   });
+
+  itShouldReturnFakerValue(name);
 });

@@ -1,24 +1,20 @@
-const chai = require('chai');
 import { Phone } from '../../src/entity/phone';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Phone Entity Tests', () => {
-  let phone;
-
-  before(function() {
-    phone = new Phone();
-  });
+  const phone = new Phone();
 
   it('has name', () => {
-    expect(phone.getName()).to.equal('phone');
+    expect(phone.getName()).toEqual('phone');
   });
 
   it('has method', () => {
-    expect(phone.getMethods()).to.eql([
+    expect(phone.getMethods()).toEqual([
       'phoneNumber',
       'phoneNumberFormat',
       'phoneFormats',
     ]);
   });
+
+  itShouldReturnFakerValue(phone);
 });

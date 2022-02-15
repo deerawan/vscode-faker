@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Commerce } from '../../src/entity/commerce';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Commerce Entity Tests', () => {
-  let commerce;
-
-  before(function () {
-    commerce = new Commerce();
-  });
+  const commerce = new Commerce();
 
   it('has name', () => {
-    expect(commerce.getName()).to.equal('commerce');
+    expect(commerce.getName()).toEqual('commerce');
   });
 
   it('has method', () => {
-    expect(commerce.getMethods()).to.eql([
+    expect(commerce.getMethods()).toEqual([
       'color',
       'department',
       'productName',
@@ -26,4 +20,6 @@ describe('Commerce Entity Tests', () => {
       'productDescription',
     ]);
   });
+
+  itShouldReturnFakerValue(commerce);
 });

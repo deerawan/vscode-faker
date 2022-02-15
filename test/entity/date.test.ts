@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Date } from '../../src/entity/date';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Date Entity Tests', () => {
-  let date;
-
-  before(function () {
-    date = new Date();
-  });
+  const date = new Date();
 
   it('has name', () => {
-    expect(date.getName()).to.equal('date');
+    expect(date.getName()).toEqual('date');
   });
 
   it('has method', () => {
-    expect(date.getMethods()).to.eql([
+    expect(date.getMethods()).toEqual([
       'past',
       'future',
       'between',
@@ -25,4 +19,6 @@ describe('Date Entity Tests', () => {
       'weekday',
     ]);
   });
+
+  itShouldReturnFakerValue(date);
 });

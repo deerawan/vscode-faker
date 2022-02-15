@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Finance } from '../../src/entity/finance';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Finance Entity Tests', () => {
-  let finance;
-
-  before(function () {
-    finance = new Finance();
-  });
+  const finance = new Finance();
 
   it('has name', () => {
-    expect(finance.getName()).to.equal('finance');
+    expect(finance.getName()).toEqual('finance');
   });
 
   it('has method', () => {
-    expect(finance.getMethods()).to.eql([
+    expect(finance.getMethods()).toEqual([
       'account',
       'accountName',
       'routingNumber',
@@ -35,4 +29,6 @@ describe('Finance Entity Tests', () => {
       'transactionDescription',
     ]);
   });
+
+  itShouldReturnFakerValue(finance);
 });

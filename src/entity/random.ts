@@ -7,20 +7,14 @@ export class Random implements FakerEntity {
 
   public getMethods() {
     return [
-      'number',
-      'float',
       'arrayElement',
       'arrayElements',
       'objectElement',
-      'uuid',
-      'boolean',
       'word',
       'words',
-      'image',
       'locale',
       'alpha',
       'alphaNumeric',
-      'hexaDecimal',
     ];
   }
 }

@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Company } from '../../src/entity/company';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Company Entity Tests', () => {
-  let company;
-
-  before(function() {
-    company = new Company();
-  });
+  const company = new Company();
 
   it('has name', () => {
-    expect(company.getName()).to.equal('company');
+    expect(company.getName()).toEqual('company');
   });
 
   it('has method', () => {
-    expect(company.getMethods()).to.eql([
+    expect(company.getMethods()).toEqual([
       'suffixes',
       'companyName',
       'companySuffix',
@@ -29,4 +23,6 @@ describe('Company Entity Tests', () => {
       'bsNoun',
     ]);
   });
+
+  itShouldReturnFakerValue(company);
 });
