@@ -174,7 +174,7 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "compile:watch": "npm run compile -- --watch",
-    "test": "jest'",
+    "test": "jest",
     "test:watch": "jest --watch",
     "precommit": "lint-staged",
     "format": "prettier --write \"{src,test}/**/*.ts\"",
