@@ -17,6 +17,8 @@ describe('Vehicle Entity Tests', () => {
       'fuel',
       'vin',
       'color',
+      'vrm',
+      'bicycle',
     ]);
   });
 

@@ -6,6 +6,16 @@ export class Vehicle implements FakerEntity {
   }
 
   public getMethods() {
-    return ['vehicle', 'manufacturer', 'model', 'type', 'fuel', 'vin', 'color'];
+    return [
+      'vehicle',
+      'manufacturer',
+      'model',
+      'type',
+      'fuel',
+      'vin',
+      'color',
+      'vrm',
+      'bicycle',
+    ];
   }
 }
