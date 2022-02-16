@@ -17,6 +17,8 @@ Fake data you can generate:
 - image
 - internet
 - lorem
+- mersenne
+- music
 - name
 - phone
 - random
@@ -44,7 +46,7 @@ Type <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> to launch command palette and 
 "faker.locale": "id_ID"
 ```
 
-See [Supported locales](https://github.com/marak/Faker.js/#localization)
+See [Supported locales](https://fakerjs.dev/api/localization.html#localization)
 
 ## License
 

@@ -10,9 +10,11 @@ import * as entity from './entity';
 import { fakerFactory } from './faker-factory';
 
 const address = new entity.Address();
+const animal = new entity.Animal();
 const commerce = new entity.Commerce();
 const company = new entity.Company();
 const database = new entity.Database();
+const datatype = new entity.Datatype();
 const date = new entity.Date();
 const finance = new entity.Finance();
 const git = new entity.Git();
@@ -20,6 +22,8 @@ const hacker = new entity.Hacker();
 const image = new entity.Image();
 const internet = new entity.Internet();
 const lorem = new entity.Lorem();
+const mersenne = new entity.Mersenne();
+const music = new entity.Music();
 const name = new entity.Name();
 const phone = new entity.Phone();
 const random = new entity.Random();
@@ -36,9 +40,11 @@ export async function activate(context: ExtensionContext) {
 
   const fakerEntities = [
     address,
+    animal,
     commerce,
     company,
     database,
+    datatype,
     date,
     finance,
     git,
@@ -46,6 +52,8 @@ export async function activate(context: ExtensionContext) {
     image,
     internet,
     lorem,
+    mersenne,
+    music,
     name,
     phone,
     random,

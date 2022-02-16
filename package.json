@@ -23,9 +23,11 @@
   ],
   "activationEvents": [
     "onCommand:faker.address",
+    "onCommand:faker.animal",
     "onCommand:faker.commerce",
     "onCommand:faker.company",
     "onCommand:faker.database",
+    "onCommand:faker.datatype",
     "onCommand:faker.date",
     "onCommand:faker.finance",
     "onCommand:faker.git",
@@ -33,6 +35,8 @@
     "onCommand:faker.image",
     "onCommand:faker.internet",
     "onCommand:faker.lorem",
+    "onCommand:faker.mersenne",
+    "onCommand:faker.music",
     "onCommand:faker.name",
     "onCommand:faker.phone",
     "onCommand:faker.random",
@@ -48,6 +52,10 @@
         "title": "Faker: Address"
       },
       {
+        "command": "faker.animal",
+        "title": "Faker: Animal"
+      },
+      {
         "command": "faker.commerce",
         "title": "Faker: Commerce"
       },
@@ -58,6 +66,10 @@
       {
         "command": "faker.database",
         "title": "Faker: Database"
+      },
+      {
+        "command": "faker.datatype",
+        "title": "Faker: Datatype"
       },
       {
         "command": "faker.date",
@@ -86,6 +98,14 @@
       {
         "command": "faker.lorem",
         "title": "Faker: Lorem"
+      },
+      {
+        "command": "faker.mersenne",
+        "title": "Faker: Mersenne"
+      },
+      {
+        "command": "faker.music",
+        "title": "Faker: Music"
       },
       {
         "command": "faker.name",
