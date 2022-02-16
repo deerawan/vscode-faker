@@ -5,6 +5,7 @@ Generate fake data inside Visual Studio Code. Fake data is based on [Faker](http
 Fake data you can generate:
 
 - address
+- animal
 - commerce
 - company
 - database
