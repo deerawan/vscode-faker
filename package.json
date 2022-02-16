@@ -23,9 +23,11 @@
   ],
   "activationEvents": [
     "onCommand:faker.address",
+    "onCommand:faker.animal",
     "onCommand:faker.commerce",
     "onCommand:faker.company",
     "onCommand:faker.database",
+    "onCommand:faker.datatype",
     "onCommand:faker.date",
     "onCommand:faker.finance",
     "onCommand:faker.git",
@@ -48,6 +50,10 @@
         "title": "Faker: Address"
       },
       {
+        "command": "faker.animal",
+        "title": "Faker: Animal"
+      },
+      {
         "command": "faker.commerce",
         "title": "Faker: Commerce"
       },
@@ -58,6 +64,10 @@
       {
         "command": "faker.database",
         "title": "Faker: Database"
+      },
+      {
+        "command": "faker.datatype",
+        "title": "Faker: Datatype"
       },
       {
         "command": "faker.date",

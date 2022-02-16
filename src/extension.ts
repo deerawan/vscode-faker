@@ -10,9 +10,11 @@ import * as entity from './entity';
 import { fakerFactory } from './faker-factory';
 
 const address = new entity.Address();
+const animal = new entity.Animal();
 const commerce = new entity.Commerce();
 const company = new entity.Company();
 const database = new entity.Database();
+const datatype = new entity.Datatype();
 const date = new entity.Date();
 const finance = new entity.Finance();
 const git = new entity.Git();
@@ -36,9 +38,11 @@ export async function activate(context: ExtensionContext) {
 
   const fakerEntities = [
     address,
+    animal,
     commerce,
     company,
     database,
+    datatype,
     date,
     finance,
     git,
