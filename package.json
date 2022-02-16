@@ -35,6 +35,8 @@
     "onCommand:faker.image",
     "onCommand:faker.internet",
     "onCommand:faker.lorem",
+    "onCommand:faker.mersenne",
+    "onCommand:faker.music",
     "onCommand:faker.name",
     "onCommand:faker.phone",
     "onCommand:faker.random",
@@ -96,6 +98,14 @@
       {
         "command": "faker.lorem",
         "title": "Faker: Lorem"
+      },
+      {
+        "command": "faker.mersenne",
+        "title": "Faker: Mersenne"
+      },
+      {
+        "command": "faker.music",
+        "title": "Faker: Music"
       },
       {
         "command": "faker.name",

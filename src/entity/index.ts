@@ -12,6 +12,8 @@ export * from './hacker';
 export * from './image';
 export * from './internet';
 export * from './lorem';
+export * from './mersenne';
+export * from './music';
 export * from './name';
 export * from './phone';
 export * from './random';

@@ -17,6 +17,8 @@ Fake data you can generate:
 - image
 - internet
 - lorem
+- mersenne
+- music
 - name
 - phone
 - random

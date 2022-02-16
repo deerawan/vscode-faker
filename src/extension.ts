@@ -22,6 +22,8 @@ const hacker = new entity.Hacker();
 const image = new entity.Image();
 const internet = new entity.Internet();
 const lorem = new entity.Lorem();
+const mersenne = new entity.Mersenne();
+const music = new entity.Music();
 const name = new entity.Name();
 const phone = new entity.Phone();
 const random = new entity.Random();
@@ -50,6 +52,8 @@ export async function activate(context: ExtensionContext) {
     image,
     internet,
     lorem,
+    mersenne,
+    music,
     name,
     phone,
     random,
