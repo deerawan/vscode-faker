@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.0
+
+- Switch to @faker-js/faker
+- Add `animal`, `music`, `marsenne` and `datatype` entities
+- Update `git` entity
+- Improve tests
+
 ## 1.5.0
 
 - Add support for Faker v5.1
