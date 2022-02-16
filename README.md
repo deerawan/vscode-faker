@@ -20,6 +20,7 @@ Fake data you can generate:
 - phone
 - random
 - system
+- vehicle
 
 ## Installation
 
