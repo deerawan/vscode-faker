@@ -12,6 +12,7 @@ Fake data you can generate:
 - datatype
 - date
 - finance
+- git
 - hacker
 - image
 - internet
