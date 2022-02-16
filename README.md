@@ -1,6 +1,6 @@
 # VSCode Faker
 
-Generate fake data inside Visual Studio Code. Fake data is based on [Faker](https://github.com/marak/Faker.js).
+Generate fake data inside Visual Studio Code. Fake data is based on [Faker](https://github.com/faker-js/faker).
 
 Fake data you can generate:
 
@@ -8,6 +8,7 @@ Fake data you can generate:
 - commerce
 - company
 - database
+- datatype
 - date
 - finance
 - hacker
