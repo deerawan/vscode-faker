@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Lorem } from '../../src/entity/lorem';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('lorem Entity Tests', () => {
-  let lorem;
-
-  before(function() {
-    lorem = new Lorem();
-  });
+  const lorem = new Lorem();
 
   it('has name', () => {
-    expect(lorem.getName()).to.equal('lorem');
+    expect(lorem.getName()).toEqual('lorem');
   });
 
   it('has method', () => {
-    expect(lorem.getMethods()).to.eql([
+    expect(lorem.getMethods()).toEqual([
       'word',
       'words',
       'sentence',
@@ -27,4 +21,6 @@ describe('lorem Entity Tests', () => {
       'lines',
     ]);
   });
+
+  itShouldReturnFakerValue(lorem);
 });

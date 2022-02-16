@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Internet } from '../../src/entity/internet';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('internet Entity Tests', () => {
-  let internet;
-
-  before(function() {
-    internet = new Internet();
-  });
+  const internet = new Internet();
 
   it('has name', () => {
-    expect(internet.getName()).to.equal('internet');
+    expect(internet.getName()).toEqual('internet');
   });
 
   it('has method', () => {
-    expect(internet.getMethods()).to.eql([
+    expect(internet.getMethods()).toEqual([
       'avatar',
       'email',
       'exampleEmail',
@@ -33,4 +27,6 @@ describe('internet Entity Tests', () => {
       'password',
     ]);
   });
+
+  itShouldReturnFakerValue(internet);
 });

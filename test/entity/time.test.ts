@@ -1,20 +1,16 @@
-const chai = require('chai');
 import { Time } from '../../src/entity/time';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Time Entity Tests', () => {
-  let time;
-
-  before(function () {
-    time = new Time();
-  });
+  const time = new Time();
 
   it('has name', () => {
-    expect(time.getName()).to.equal('time');
+    expect(time.getName()).toEqual('time');
   });
 
   it('has method', () => {
-    expect(time.getMethods()).to.eql(['recent']);
+    expect(time.getMethods()).toEqual(['recent']);
   });
+
+  itShouldReturnFakerValue(time);
 });

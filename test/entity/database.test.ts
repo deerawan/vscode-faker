@@ -1,25 +1,21 @@
-const chai = require('chai');
 import { Database } from '../../src/entity/database';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Database Entity Tests', () => {
-  let database;
-
-  before(function() {
-    database = new Database();
-  });
+  const database = new Database();
 
   it('has name', () => {
-    expect(database.getName()).to.equal('database');
+    expect(database.getName()).toEqual('database');
   });
 
   it('has method', () => {
-    expect(database.getMethods()).to.eql([
+    expect(database.getMethods()).toEqual([
       'column',
       'type',
       'collation',
       'engine',
     ]);
   });
+
+  itShouldReturnFakerValue(database);
 });

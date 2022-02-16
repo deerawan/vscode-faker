@@ -1,35 +1,25 @@
-const chai = require('chai');
 import { Random } from '../../src/entity/random';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Random Entity Tests', () => {
-  let random;
-
-  before(function () {
-    random = new Random();
-  });
+  const random = new Random();
 
   it('has name', () => {
-    expect(random.getName()).to.equal('random');
+    expect(random.getName()).toEqual('random');
   });
 
   it('has method', () => {
-    expect(random.getMethods()).to.eql([
-      'number',
-      'float',
+    expect(random.getMethods()).toEqual([
       'arrayElement',
       'arrayElements',
       'objectElement',
-      'uuid',
-      'boolean',
       'word',
       'words',
-      'image',
       'locale',
       'alpha',
       'alphaNumeric',
-      'hexaDecimal',
     ]);
   });
+
+  itShouldReturnFakerValue(random);
 });

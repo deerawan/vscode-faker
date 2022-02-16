@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { System } from '../../src/entity/system';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('system Entity Tests', () => {
-  let system;
-
-  before(function() {
-    system = new System();
-  });
+  const system = new System();
 
   it('has name', () => {
-    expect(system.getName()).to.equal('system');
+    expect(system.getName()).toEqual('system');
   });
 
   it('has method', () => {
-    expect(system.getMethods()).to.eql([
+    expect(system.getMethods()).toEqual([
       'fileName',
       'commonFileName',
       'mimeType',
@@ -28,4 +22,6 @@ describe('system Entity Tests', () => {
       'semver',
     ]);
   });
+
+  itShouldReturnFakerValue(system);
 });

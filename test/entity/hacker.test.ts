@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Hacker } from '../../src/entity/hacker';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Hacker Entity Tests', () => {
-  let hacker;
-
-  before(function() {
-    hacker = new Hacker();
-  });
+  const hacker = new Hacker();
 
   it('has name', () => {
-    expect(hacker.getName()).to.equal('hacker');
+    expect(hacker.getName()).toEqual('hacker');
   });
 
   it('has method', () => {
-    expect(hacker.getMethods()).to.eql([
+    expect(hacker.getMethods()).toEqual([
       'abbreviation',
       'adjective',
       'noun',
@@ -24,4 +18,6 @@ describe('Hacker Entity Tests', () => {
       'phrase',
     ]);
   });
+
+  itShouldReturnFakerValue(hacker);
 });

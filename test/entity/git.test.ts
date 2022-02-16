@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Git } from '../../src/entity/git';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Git Entity Tests', () => {
-  let git;
-
-  before(function () {
-    git = new Git();
-  });
+  const git = new Git();
 
   it('has name', () => {
-    expect(git.getName()).to.equal('git');
+    expect(git.getName()).toEqual('git');
   });
 
   it('has method', () => {
-    expect(git.getMethods()).to.eql([
+    expect(git.getMethods()).toEqual([
       'branch',
       'commitEntry',
       'commitMessage',
@@ -23,4 +17,6 @@ describe('Git Entity Tests', () => {
       'shortSha',
     ]);
   });
+
+  itShouldReturnFakerValue(git);
 });

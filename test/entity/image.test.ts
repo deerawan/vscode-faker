@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Image } from '../../src/entity/image';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('image Entity Tests', () => {
-  let image;
-
-  before(function () {
-    image = new Image();
-  });
+  const image = new Image();
 
   it('has name', () => {
-    expect(image.getName()).to.equal('image');
+    expect(image.getName()).toEqual('image');
   });
 
   it('has method', () => {
-    expect(image.getMethods()).to.eql([
+    expect(image.getMethods()).toEqual([
       'image',
       'avatar',
       'imageUrl',
@@ -33,9 +27,8 @@ describe('image Entity Tests', () => {
       'technics',
       'transport',
       'dataUri',
-      'lorempixel',
-      'unsplash',
-      'lorempicsum',
     ]);
   });
+
+  itShouldReturnFakerValue(image);
 });

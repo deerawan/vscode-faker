@@ -1,21 +1,15 @@
-const chai = require('chai');
 import { Address } from '../../src/entity/address';
-
-const expect = chai.expect;
+import { itShouldReturnFakerValue } from '../test-helper';
 
 describe('Address Entity Tests', () => {
-  let address;
-
-  before(function () {
-    address = new Address();
-  });
+  const address = new Address();
 
   it('has name', () => {
-    expect(address.getName()).to.equal('address');
+    expect(address.getName()).toEqual('address');
   });
 
   it('has method', () => {
-    expect(address.getMethods()).to.eql([
+    expect(address.getMethods()).toEqual([
       'zipCode',
       'zipCodeByState',
       'city',
@@ -40,4 +34,6 @@ describe('Address Entity Tests', () => {
       'timeZone',
     ]);
   });
+
+  itShouldReturnFakerValue(address);
 });
