@@ -5,6 +5,9 @@ import {
   commands,
   workspace,
   Range,
+  WorkspaceEdit,
+  TextEdit,
+  Position,
 } from 'vscode';
 import * as entity from './entity';
 import { fakerFactory } from './faker-factory';
@@ -71,6 +74,12 @@ export async function activate(context: ExtensionContext) {
       )
     );
   }
+
+  context.subscriptions.push(
+    commands.registerCommand(`faker.fakeDocument`, () => {
+      executeFakeDocument(faker);
+    })
+  );
 }
 
 export function deactivate() {}
@@ -114,4 +123,31 @@ async function executeFaker(faker: any, fakerEntity: entity.FakerEntity) {
 
   const generateFakeFn = faker[fakerEntity.getName()][selectedMethod];
   insertText(getEditor(), generateFakeFn);
+}
+
+async function executeFakeDocument(faker: any) {
+  const editor = getEditor();
+
+  if (editor) {
+    const content = editor.document.getText();
+    const workEdits = new WorkspaceEdit();
+
+    const textEdits: TextEdit[] = [];
+
+    // Delete existing content
+    textEdits.push(
+      TextEdit.delete(
+        new Range(
+          new Position(0, 0),
+          editor.document.lineAt(editor.document.lineCount - 1).range.end
+        )
+      )
+    );
+
+    // Add new content
+    textEdits.push(TextEdit.insert(new Position(0, 0), faker.fake(content)));
+
+    workEdits.set(editor.document.uri, textEdits); // give the edits
+    workspace.applyEdit(workEdits);
+  }
 }
