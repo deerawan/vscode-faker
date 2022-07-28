@@ -42,7 +42,8 @@
     "onCommand:faker.random",
     "onCommand:faker.system",
     "onCommand:faker.time",
-    "onCommand:faker.vehicle"
+    "onCommand:faker.vehicle",
+    "onCommand:faker.fakeDocument"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -130,6 +131,10 @@
       {
         "command": "faker.vehicle",
         "title": "Faker: Vehicle"
+      },
+      {
+        "command": "faker.fakeDocument",
+        "title": "Convert Faker variables"
       }
     ],
     "configuration": {
