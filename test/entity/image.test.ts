@@ -9,25 +9,7 @@ describe('image Entity Tests', () => {
   });
 
   it('has method', () => {
-    expect(image.getMethods()).toEqual([
-      'image',
-      'avatar',
-      'imageUrl',
-      'abstract',
-      'animals',
-      'business',
-      'cats',
-      'city',
-      'food',
-      'nightlife',
-      'fashion',
-      'people',
-      'nature',
-      'sports',
-      'technics',
-      'transport',
-      'dataUri',
-    ]);
+    expect(image.getMethods()).toEqual(['avatar', 'url', 'dataUri']);
   });
 
   itShouldReturnFakerValue(image);

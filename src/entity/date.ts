@@ -6,6 +6,6 @@ export class Date implements FakerEntity {
   }
 
   public getMethods() {
-    return ['past', 'future', 'between', 'recent', 'soon', 'month', 'weekday'];
+    return ['past', 'future', 'recent', 'soon', 'month', 'weekday'];
   }
 }

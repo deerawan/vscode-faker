@@ -14,7 +14,6 @@ describe('Git Entity Tests', () => {
       'commitEntry',
       'commitMessage',
       'commitSha',
-      'shortSha',
     ]);
   });
 

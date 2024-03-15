@@ -10,10 +10,10 @@ describe('Finance Entity Tests', () => {
 
   it('has method', () => {
     expect(finance.getMethods()).toEqual([
-      'account',
+      'accountNumber',
       'accountName',
       'routingNumber',
-      'mask',
+      'maskedNumber',
       'amount',
       'transactionType',
       'currencyCode',

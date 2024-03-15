@@ -2,10 +2,10 @@
   "name": "vscode-faker",
   "displayName": "vscode-faker",
   "description": "Generate fake data for name, address, lorem ipsum, commerce and much more",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "publisher": "deerawan",
   "engines": {
-    "node": ">8.12.0",
+    "node": ">14.0.0",
     "vscode": "^1.35.0"
   },
   "icon": "images/faker.png",
@@ -22,7 +22,6 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:faker.address",
     "onCommand:faker.animal",
     "onCommand:faker.commerce",
     "onCommand:faker.company",
@@ -34,23 +33,17 @@
     "onCommand:faker.hacker",
     "onCommand:faker.image",
     "onCommand:faker.internet",
+    "onCommand:faker.location",
     "onCommand:faker.lorem",
-    "onCommand:faker.mersenne",
     "onCommand:faker.music",
-    "onCommand:faker.name",
+    "onCommand:faker.person",
     "onCommand:faker.phone",
-    "onCommand:faker.random",
     "onCommand:faker.system",
-    "onCommand:faker.time",
     "onCommand:faker.vehicle"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
-      {
-        "command": "faker.address",
-        "title": "Faker: Address"
-      },
       {
         "command": "faker.animal",
         "title": "Faker: Animal"
@@ -94,38 +87,29 @@
       {
         "command": "faker.internet",
         "title": "Faker: Internet"
+      },{
+        "command": "faker.location",
+        "title": "Faker: Location"
       },
       {
         "command": "faker.lorem",
         "title": "Faker: Lorem"
       },
       {
-        "command": "faker.mersenne",
-        "title": "Faker: Mersenne"
-      },
-      {
         "command": "faker.music",
         "title": "Faker: Music"
       },
       {
-        "command": "faker.name",
-        "title": "Faker: Name"
+        "command": "faker.person",
+        "title": "Faker: Person"
       },
       {
         "command": "faker.phone",
         "title": "Faker: Phone"
       },
       {
-        "command": "faker.random",
-        "title": "Faker: Random"
-      },
-      {
         "command": "faker.system",
         "title": "Faker: System"
-      },
-      {
-        "command": "faker.time",
-        "title": "Faker: Time"
       },
       {
         "command": "faker.vehicle",
@@ -202,7 +186,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "@types/node": "^12.7.11",
+    "@types/node": "^14.0.0",
     "@types/vscode": "^1.32.0",
     "husky": "^0.14.3",
     "jest": "^27.5.1",
@@ -215,7 +199,7 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "@faker-js/faker": "^6.0.0-alpha.6"
+    "@faker-js/faker": "^8.4.1" 
   },
   "lint-staged": {
     "*.{ts,json}": [

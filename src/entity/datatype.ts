@@ -6,17 +6,6 @@ export class Datatype implements FakerEntity {
   }
 
   public getMethods() {
-    return [
-      'array',
-      'bigInt',
-      'boolean',
-      'datetime',
-      'float',
-      'hexaDecimal',
-      'json',
-      'number',
-      'string',
-      'uuid',
-    ];
+    return ['boolean'];
   }
 }

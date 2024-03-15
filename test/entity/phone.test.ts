@@ -9,11 +9,7 @@ describe('Phone Entity Tests', () => {
   });
 
   it('has method', () => {
-    expect(phone.getMethods()).toEqual([
-      'phoneNumber',
-      'phoneNumberFormat',
-      'phoneFormats',
-    ]);
+    expect(phone.getMethods()).toEqual(['number']);
   });
 
   itShouldReturnFakerValue(phone);

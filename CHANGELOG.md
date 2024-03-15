@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.1
+
+- @faker-js/faker update to v8.4.1
+  - Node.js version update to 14
+  - A lot of methods have been updated or deprecated
+  - Updated Locales
+  - Updated Tests
+
 ## 2.0.0
 
 - Switch to @faker-js/faker

@@ -9,18 +9,7 @@ describe('Datatype Entity Tests', () => {
   });
 
   it('has method', () => {
-    expect(datatype.getMethods()).toEqual([
-      'array',
-      'bigInt',
-      'boolean',
-      'datetime',
-      'float',
-      'hexaDecimal',
-      'json',
-      'number',
-      'string',
-      'uuid',
-    ]);
+    expect(datatype.getMethods()).toEqual(['boolean']);
   });
 
   itShouldReturnFakerValue(datatype);
