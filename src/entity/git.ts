@@ -6,6 +6,6 @@ export class Git implements FakerEntity {
   }
 
   public getMethods() {
-    return ['branch', 'commitEntry', 'commitMessage', 'commitSha', 'shortSha'];
+    return ['branch', 'commitEntry', 'commitMessage', 'commitSha'];
   }
 }

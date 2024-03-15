@@ -7,7 +7,6 @@ export class Internet implements FakerEntity {
 
   public getMethods() {
     return [
-      'avatar',
       'email',
       'exampleEmail',
       'userName',

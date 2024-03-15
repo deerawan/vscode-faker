@@ -7,10 +7,10 @@ export class Finance implements FakerEntity {
 
   public getMethods() {
     return [
-      'account',
+      'accountNumber',
       'accountName',
       'routingNumber',
-      'mask',
+      'maskedNumber',
       'amount',
       'transactionType',
       'currencyCode',

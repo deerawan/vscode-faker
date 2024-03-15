@@ -7,7 +7,6 @@ export class Commerce implements FakerEntity {
 
   public getMethods() {
     return [
-      'color',
       'department',
       'productName',
       'price',

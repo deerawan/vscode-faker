@@ -7,17 +7,15 @@ export class Company implements FakerEntity {
 
   public getMethods() {
     return [
-      'suffixes',
-      'companyName',
-      'companySuffix',
+      'name',
       'catchPhrase',
-      'bs',
+      'buzzPhrase',
       'catchPhraseAdjective',
       'catchPhraseDescriptor',
       'catchPhraseNoun',
-      'bsAdjective',
-      'bsBuzz',
-      'bsNoun',
+      'buzzAdjective',
+      'buzzVerb',
+      'buzzNoun',
     ];
   }
 }

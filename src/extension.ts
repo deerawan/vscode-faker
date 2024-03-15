@@ -9,7 +9,7 @@ import {
 import * as entity from './entity';
 import { fakerFactory } from './faker-factory';
 
-const address = new entity.Address();
+const address = new entity.Location();
 const animal = new entity.Animal();
 const commerce = new entity.Commerce();
 const company = new entity.Company();
@@ -22,13 +22,10 @@ const hacker = new entity.Hacker();
 const image = new entity.Image();
 const internet = new entity.Internet();
 const lorem = new entity.Lorem();
-const mersenne = new entity.Mersenne();
 const music = new entity.Music();
-const name = new entity.Name();
+const name = new entity.Person();
 const phone = new entity.Phone();
-const random = new entity.Random();
 const system = new entity.System();
-const time = new entity.Time();
 const vehicle = new entity.Vehicle();
 
 export async function activate(context: ExtensionContext) {
@@ -52,13 +49,10 @@ export async function activate(context: ExtensionContext) {
     image,
     internet,
     lorem,
-    mersenne,
     music,
     name,
     phone,
-    random,
     system,
-    time,
     vehicle,
   ];
 

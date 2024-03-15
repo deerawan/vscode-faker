@@ -10,7 +10,6 @@ describe('Commerce Entity Tests', () => {
 
   it('has method', () => {
     expect(commerce.getMethods()).toEqual([
-      'color',
       'department',
       'productName',
       'price',

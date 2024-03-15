@@ -6,24 +6,6 @@ export class Image implements FakerEntity {
   }
 
   public getMethods() {
-    return [
-      'image',
-      'avatar',
-      'imageUrl',
-      'abstract',
-      'animals',
-      'business',
-      'cats',
-      'city',
-      'food',
-      'nightlife',
-      'fashion',
-      'people',
-      'nature',
-      'sports',
-      'technics',
-      'transport',
-      'dataUri',
-    ];
+    return ['avatar', 'url', 'dataUri'];
   }
 }

@@ -10,7 +10,6 @@ describe('internet Entity Tests', () => {
 
   it('has method', () => {
     expect(internet.getMethods()).toEqual([
-      'avatar',
       'email',
       'exampleEmail',
       'userName',

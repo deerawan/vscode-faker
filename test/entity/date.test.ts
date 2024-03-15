@@ -12,7 +12,6 @@ describe('Date Entity Tests', () => {
     expect(date.getMethods()).toEqual([
       'past',
       'future',
-      'between',
       'recent',
       'soon',
       'month',

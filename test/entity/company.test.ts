@@ -10,17 +10,15 @@ describe('Company Entity Tests', () => {
 
   it('has method', () => {
     expect(company.getMethods()).toEqual([
-      'suffixes',
-      'companyName',
-      'companySuffix',
+      'name',
       'catchPhrase',
-      'bs',
+      'buzzPhrase',
       'catchPhraseAdjective',
       'catchPhraseDescriptor',
       'catchPhraseNoun',
-      'bsAdjective',
-      'bsBuzz',
-      'bsNoun',
+      'buzzAdjective',
+      'buzzVerb',
+      'buzzNoun',
     ]);
   });
 
